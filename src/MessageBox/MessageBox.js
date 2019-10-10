@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './MessageBox.css';
 
-import PhotoMessage from '../PhotoMessage/PhotoMessage';
-import FileMessage from '../FileMessage/FileMessage';
 import SystemMessage from '../SystemMessage/SystemMessage';
 import LocationMessage from '../LocationMessage/LocationMessage';
 import SpotifyMessage from '../SpotifyMessage/SpotifyMessage';
@@ -121,28 +119,6 @@ export class MessageBox extends Component {
                                         src={this.props.src}
                                         zoom={this.props.zoom}
                                         markerColor={this.props.markerColor}
-                                        text={this.props.text} />
-                                }
-
-                                {
-                                    this.props.type === 'photo' &&
-                                    <PhotoMessage
-                                        onOpen={this.props.onOpen}
-                                        onDownload={this.props.onDownload}
-                                        onLoad={this.props.onLoad}
-                                        onPhotoError={this.props.onPhotoError}
-                                        data={this.props.data}
-                                        width={this.props.width}
-                                        height={this.props.height}
-                                        text={this.props.text} />
-                                }
-
-                                {
-                                    this.props.type === 'file' &&
-                                    <FileMessage
-                                        onOpen={this.props.onOpen}
-                                        onDownload={this.props.onDownload}
-                                        data={this.props.data}
                                         text={this.props.text} />
                                 }
 
